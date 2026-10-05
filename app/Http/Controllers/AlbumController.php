@@ -25,7 +25,7 @@ class AlbumController extends Controller
             Album::query()
                 ->with([
                     'artist',
-                    'tracks' => fn($query) => $query->orderBy('position')->orderBy('id'),
+                    'tracks' => fn ($query) => $query->orderBy('position')->orderBy('id'),
                 ])
                 ->findOrFail($id),
         );

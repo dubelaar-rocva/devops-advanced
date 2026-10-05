@@ -22,12 +22,12 @@ class AlbumResource extends JsonResource
             'id' => $this->resource->id,
             'title' => $this->resource->title,
             'release_date' => $this->resource->release_date,
-            'artist' =>new ArtistResource(
+            'artist' => new ArtistResource(
                 $this->whenLoaded('artist'),
             ),
             'tracks' => TrackResource::collection(
                 $this->whenLoaded('tracks')
-            )
+            ),
         ];
     }
 }

@@ -20,9 +20,9 @@ class PlaylistController extends Controller
     {
         return new PlaylistResource(
             Playlist::query()
-                    ->with([
-                        'tracks',
-                    ])
+                ->with([
+                    'tracks',
+                ])
                 ->findOrFail($id),
         );
     }

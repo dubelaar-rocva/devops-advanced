@@ -28,7 +28,7 @@ class TrackResource extends JsonResource
             ),
             'album' => new AlbumResource(
                 $this->whenLoaded('album'),
-            )
+            ),
         ];
     }
 }
